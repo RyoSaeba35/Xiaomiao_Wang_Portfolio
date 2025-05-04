@@ -1,0 +1,49 @@
+<div class="navbar-container">
+  <div class="navbar">
+    <ul class="section">
+      <li><%= link_to 'Qui suis-je ?', '#about_section', class: 'scroll-link' %></li>
+      <li><%= link_to 'Productions', '#', class: 'scroll-link' %></li>
+      <li><%= link_to 'Mes services', '#', class: 'scroll-link' %></li>
+      <li><%= link_to 'Mon CV', '#', class: 'scroll-link' %></li>
+    </ul>
+    <ul class="section-contact">
+      <li><%= link_to 'Contact', '#contact-section', class: 'scroll-link' %></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    background: #ffde59;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 180px;
+  }
+
+  .section {
+    display:flex;
+    flex-direction: row;
+    gap: 90px;
+    margin: 0;
+  }
+
+  .section-contact {
+    margin: auto 32px auto auto;
+  }
+
+  .section li a:hover {
+    color: darkgrey;
+  }
+
+  .section:hover .section {
+    display: block;
+  }
+</style>

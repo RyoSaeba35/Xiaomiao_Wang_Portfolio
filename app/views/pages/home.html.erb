@@ -1,0 +1,95 @@
+<%= render 'shared/header' %>
+
+<section id='about_section'>
+    <div class="main-presentation">
+      <div class="left-presentation">
+        <div>
+          <h2>Hello</h2>
+          <h3>C'est Xiaomiao :)</h3>
+          <p>Je suis UX/UI Designer, Chargée de communication et Interprète (EN/FR/CH).</p>
+        </div>
+      </div>
+      <div class="right-presentation">
+        <%= image_tag "xiaomiao_profile.png", alt: "Photo", class: "photo" %>
+      </div>
+    </div>
+    <div class="secondary">
+      <p>Mon parcours ?</p>
+      <p><%= link_to '⬇️', '#parcours', class: 'scroll-link' %></p>
+    </div>
+</section>
+<section id="parcours" class="parcours-section">
+  <div class="container">
+    <div class="parcours-top">
+      <div class="illustration">
+        <%= image_tag 'xiaomiao_travel.png', alt: 'Person walking around the globe' %>
+      </div>
+      <div class="text-block">
+        <p>
+          19 ans en Chine, 2 ans en Irlande, 3 ans en Angleterre... et ça fait déjà 6 ans que je vis en France !
+          Mon parcours est très international. J’adore voyager, rencontrer des personnes venues d’horizons différents et découvrir de nouvelles cultures.
+          <strong>Pour moi, c’est justement la diversité qui rend chacun unique.</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="parcours-bottom">
+      <div class="text-box">
+        <p><strong>Je pense que mon inspiration vient de là :</strong><br>
+        de cette richesse que j’ai rencontrée un peu partout. Parler trois langues (français, anglais, chinois) m’aide à comprendre les nuances, les logiques propres à chaque culture, et à <strong>développer une vraie empathie</strong>.
+        C’est ce regard-là que j’essaie de mettre dans tout ce que je crée.</p>
+      </div>
+      <div class="illustration">
+        <%= image_tag 'xiaomiao_thinking.png', alt: 'Multilingual character illustration' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id='skills-section'>
+  <div class="container">
+    <div>
+      <h3>Mes Compétences</h2>
+    </div>
+    <div class="center-image">
+      <%= image_tag "xiaomiao_skills.png", alt: "Photo" %>
+    </div>
+  </div>
+</section>
+<section id='contact-section'>
+  <div class='container'>
+    <div class="top-contact">
+      <div>
+        <%= image_tag "xiaomiao_chat.png", alt: "Photo" %>
+      </div>
+      <div class="contact-intro">
+        <h3>Let's have a chat :)</h3>
+        <h4>Pour un échange, un entretien ou un café?</h4>
+      </div>
+    </div>
+    <div class="middle-contact">
+      <div class="form">
+        <%= simple_form_for :contact, url: contacts_path, method: :post do |f| %>
+          <div class="form-group-one">
+            <div class="form-group">
+              <%= f.input :name, label: false, placeholder: "Votre nom et prénom", required: true %>
+            </div>
+            <div class="form-group">
+              <%= f.input :email, label: false, placeholder: "Votre adresse mail", required: true %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.input :message, as: :text, label: false, placeholder: "Message", required: true %>
+          </div>
+          <div class="form-group-btn">
+            <%= f.button :submit, "Envoyer", class: "btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="bottom-contact">
+      <p>Merci d'avoir pris le temps de parcourir mon site jusqu'à la fin.</p>
+      <p>Si vous recherchez un talent responsable et créative à évoluer au sein de votre entreprise, je suis prête à relever le défi.</p>
+      <p>(Cliquer ici, j’ai une surprise pour vous !)</p>
+    </div>
+  </div>
+</section>

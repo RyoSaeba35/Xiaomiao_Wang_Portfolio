@@ -35,7 +35,21 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
+
+  config.action_mailer.delivery_method = :smtp
+
+  # SMTP settings for Gmail (example)
+  config.action_mailer.smtp_settings = {
+  address: 'smtp.gmail.com',
+  port: 587,
+  domain: 'localhost',
+  user_name: ENV['GMAIL_USERNAME'],
+  password: ENV['GMAIL_PASSWORD'],
+  authentication: 'plain',
+  enable_starttls_auto: true
+  }
 
   # Disable caching for Action Mailer templates even if Action Controller
   # caching is enabled.
@@ -62,7 +76,10 @@ Rails.application.configure do
   config.active_job.verbose_enqueue_logs = true
 
   # Suppress logger output for asset requests.
+  config.assets.debug = true
   config.assets.quiet = true
+  config.assets.compile = true
+  config.assets.check_precompiled_asset = false
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
