@@ -1,0 +1,24 @@
+<% if notice %>
+  <div class="alert alert-info alert-dismissible fade show m-1" role="alert" data-auto-dismiss="2000">
+    <%= notice %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert" data-auto-dismiss="2000">
+    <%= alert %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var alerts = document.querySelectorAll('[data-auto-dismiss]');
+    alerts.forEach(function(alert) {
+      var timeout = parseInt(alert.getAttribute('data-auto-dismiss'), 10);
+      setTimeout(function() {
+        alert.remove();
+      }, timeout);
+    });
+  });
+</script> 

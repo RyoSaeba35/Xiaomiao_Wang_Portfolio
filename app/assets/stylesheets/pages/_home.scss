@@ -1,0 +1,297 @@
+#about_section {
+  height: 100vh;
+}
+
+.main-presentation {
+  display: grid;
+  grid-template-columns: 50% 50%; /* Two rows of equal height */
+  justify-content: space-between;
+  height: 85vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.right-presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-presentation > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+}
+
+.left-presentation > div p{
+  font-size: 40px;
+}
+
+.secondary {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  height: 15vh;
+}
+
+//Parcours Section
+#parcours {
+  height: 100vh;
+  background: linear-gradient(to bottom, transparent 20%, #FFDE59 20%);
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .parcours-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 20px;
+
+    .illustration {
+      flex: 1 1 30%;
+      text-align: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .text-block,
+    .text-box {
+      padding-top: 60px;
+      padding-left: 40px;
+      flex: 1 1 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+
+
+  .parcours-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: auto;
+    gap: 1.5rem;
+    background: whitesmoke;
+    padding: 0 24px;
+    border-radius: 34px 34px 0 0;
+
+    .illustration {
+      flex: 1 1 16%;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .text-block,
+    .text-box {
+      flex: 1 1 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      padding: auto;
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+//Parcours section
+#parcours {
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .parcours-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 20px;
+
+    .illustration {
+      flex: 1 1 30%;
+      text-align: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .text-block,
+    .text-box {
+      padding-top: 60px;
+      padding-left: 40px;
+      flex: 1 1 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+
+
+  .parcours-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: auto;
+    gap: 1.5rem;
+    background: whitesmoke;
+    padding: 0 24px;
+    border-radius: 34px 34px 0 0;
+
+    .illustration {
+      flex: 1 1 16%;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .text-block,
+    .text-box {
+      flex: 1 1 55%;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      padding: auto;
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+//skills section
+#skills-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns the title to the left */
+  height: 100vh; /* Adjust the height as needed */
+  width: 80%;
+}
+
+#skills-section .title {
+  align-self: flex-start; /* Ensures the title stays at the top left */
+}
+
+#skills-section .center-image {
+  display: flex;
+  flex: 1; /* Allows the image container to take up remaining space */
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensures the container takes full width for centering */
+}
+
+//Contact section
+#contact-section {
+  height: 100vh;
+}
+#contact-section .container {
+  width: 80%;
+}
+
+.top-contact {
+  display: flex;
+  justify-content: space-between;
+  img {
+    max-width: 200px;
+  }
+}
+
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.middle-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group-one {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group-one .form-group {
+  flex: 1;
+}
+
+.form-group input {
+  border-radius: 16px;
+  width: 100%;
+  padding: 0px 12px;
+}
+
+.form-group textarea {
+  height: 150px; /* Adjust height as needed */
+  width: 100%;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.form-group-btn {
+  text-align: right;
+}
+
+.btn {
+  padding: 10px 40px;
+  background-color: lightgrey;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #9b9a9a;
+}
+
+.bottom-contact {
+  background: #F7F7F7;
+  border-radius: 84px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  padding: 24px 96px;
+  text-align: center; /* Centers the text horizontally */
+}
